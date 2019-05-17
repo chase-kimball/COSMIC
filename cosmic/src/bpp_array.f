@@ -39,6 +39,9 @@
         DO jj = 13,20
             bkick(jj) = 0.0
         ENDDO
+        if((evolve_type.ge.15))then
+            tphys = 100000
+        endif
         END
 
 ***
@@ -112,5 +115,4 @@
         bcm(ip,40) = float(SN_2)
         bcm(ip,41) = bin_state
         bcm(ip,42) = merger_type
-
         END
